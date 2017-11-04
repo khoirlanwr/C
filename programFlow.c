@@ -38,7 +38,7 @@ void main()
 
 int startCount(int result)
 {
-	printf(">> "); scanf("%d %c", &num1, &Op);
+    printf(">> "); scanf("%d %c", &num1, &Op);
 
     if(Op == '+') {
         result += num1;
