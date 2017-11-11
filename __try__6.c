@@ -39,4 +39,6 @@ void main()
     Urutan:
     1. Menghitung ukuran dari array dengan while (line 10-13)
     2. Assign masing - masing nilai index array (line 20-23)
+    3. Menampilkan & Menghitung jumlah masing masing index array (line 27-30)
+    
 */
