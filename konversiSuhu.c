@@ -28,9 +28,9 @@ void main()
 {
     char s, d, t;
     float n, hasil;
-    printf("\================================\n");
-    printf("\         PROGRAM SUHU           \n");
-    printf("\================================\n");
+    printf("================================\n");
+    printf("         PROGRAM SUHU           \n");
+    printf("================================\n");
 
     while(t != 'N'){
         //hasil = 0;
@@ -45,7 +45,7 @@ void main()
         if(hasil != 0){
             printf("\nHasil konversi suhu   : %0.2f %c", hasil, d);
         }else{
-            printf("\Format SALAH!\n");
+            printf("Format SALAH!\n");
         }
 
         printf("\nCoba lagi? [Y/N]: "); scanf(" %c", &t);
