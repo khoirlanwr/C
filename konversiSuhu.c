@@ -14,11 +14,11 @@ float suhu(float n, char s, char d)
     }else if(s == 'F' && d == 'C'){
         return ((n-32)*5) /9; // 1
     }else if(s == 'F' && d == 'R'){
-        return ((n-32)*4) /9;
+        return ((n-32)*4) /9; // 1
     }else if(s == 'R' && d == 'C'){
         return (n*5) /4;      // 1
     }else if(s == 'R' && d == 'F'){
-        return (n*9) /4 + 32;
+        return (n*9) /4 + 32; // 1
     }else{
         return 0;
     }
