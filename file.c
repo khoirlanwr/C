@@ -12,3 +12,11 @@ int main () {
    
    return(0);
 }
+
+
+/*
+
+   Source:
+   https://www.tutorialspoint.com/c_standard_library/c_function_fseek.htm
+
+*/
