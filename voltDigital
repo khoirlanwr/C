@@ -1,0 +1,63 @@
+// Declare Variable
+int pin0 = 0;
+int pin1 = 1;
+int pin2 = 2;
+
+void getValue(int pin) 
+{
+
+  float R1, R2;
+  
+  if(pin == 0) {
+    R1 = 6000.0;
+    R2 = 4700.0;
+  }else if(pin == 1) {
+    R1 = 16290.0;
+    R2 = 4700.0;
+  } else if(pin == 2) {
+    R1 = 27000.0;
+    R2 = 4700.0;
+  }
+  
+  float value, vout, vin;
+  value = analogRead(pin);
+  vout = (value * 5.0) / 1024;
+  vin = vout / (R2/(R1+R2));
+
+  Serial.println();
+  Serial.print("Vout: ");
+  Serial.println(vout);
+  Serial.print("Vin: ");
+  Serial.println(vin);
+  
+}
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(pin0, INPUT);
+  pinMode(pin1, INPUT);
+  pinMode(pin2, INPUT);
+
+  Serial.begin(9600);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+  int a = analogRead(pin0);
+  int b = analogRead(pin1);
+  int c = analogRead(pin2);
+  
+  if(a > b && a > c) {
+    Serial.println("Pin0 terbaca!");
+    getValue(pin0);    
+  } else if(b > a && b > c) {
+    Serial.println("Pin1 terbaca!");
+    getValue(pin1);  
+  } else if(a < c && b < c) {
+    Serial.println("Pin2 terbaca!");
+    getValue(pin2);
+  }
+
+   delay(1000);
+}
